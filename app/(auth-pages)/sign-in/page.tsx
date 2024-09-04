@@ -20,7 +20,7 @@ export default async ({ searchParams }: { searchParams: Message }) => {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/protected/main");
+    return redirect("/main");
   }
 
   return (

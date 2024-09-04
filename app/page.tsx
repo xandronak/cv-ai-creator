@@ -8,7 +8,7 @@ export default async function Index() {
   const { data: user } = await supabase.auth.getUser();
 
   if (user) {
-    redirect("/protected/main");
+    redirect("/main");
   } else {
     redirect("/sign-in");
   }
